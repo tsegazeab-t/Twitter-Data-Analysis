@@ -38,8 +38,8 @@ class TweetDfExtractor:
         statuses_count 
         
     def find_full_text(self)->list:
-        text = 
-       
+        text = self.df['text'].to_list()
+        return text
     
     def find_sentiments(self, text)->list:
         
