@@ -74,7 +74,8 @@ class TweetDfExtractor:
         
     
     def find_retweet_count(self)->list:
-        retweet_count = 
+        retweet_count = self.df['retweet_count'].to_list()
+        return retweet_count
 
     def find_hashtags(self)->list:
         hashtags =
