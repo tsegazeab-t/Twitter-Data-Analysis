@@ -13,7 +13,6 @@ def read_json(json_file: str)->list:
     -------
     length of the json file and a list of json
     """
-    
     tweets_data = []
     for tweets in open(json_file,'r'):
         tweets_data.append(json.loads(tweets))
@@ -32,6 +31,7 @@ class TweetDfExtractor:
     def __init__(self, tweets_list):
         
         self.tweets_list = tweets_list
+        self.df = pd.DataFrame(tweets_list)
 
     # an example function
     def find_statuses_count(self)->list:
