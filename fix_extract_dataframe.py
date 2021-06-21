@@ -31,7 +31,7 @@ class TweetDfExtractor:
     def __init__(self, tweets_list):
         
         self.tweets_list = tweets_list
-        self.df = pd.DataFrame(tweets_list)
+        self.df = pd.json_normalize(tweets_list)
 
     # an example function
     def find_statuses_count(self)->list:
