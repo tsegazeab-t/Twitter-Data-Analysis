@@ -86,7 +86,8 @@ class TweetDfExtractor:
         return hashtags
 
     def find_mentions(self)->list:
-        mentions = 
+        mentions = self.df['entities.user_mentions'].to_list()
+        return mentions
 
 
     def find_location(self)->list:
