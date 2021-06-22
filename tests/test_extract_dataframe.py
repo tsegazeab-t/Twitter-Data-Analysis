@@ -1,7 +1,7 @@
 import unittest
 import pandas as pd
 import sys, os
-sys.path.append(os.path.abspath(os.path.join('..')))
+sys.path.append(os.path.abspath(os.path.join('../')))
 
 from extract_dataframe import read_json
 from extract_dataframe import TweetDfExtractor
@@ -23,7 +23,8 @@ class TestTweetDfExtractor(unittest.TestCase):
 	"""
 
     def setUp(self) -> pd.DataFrame:
-        self.df = TweetDfExtractor(tweet_list[:5])
+        self.df = TweetDfExtractor(tweet_list)
+        self.df.df = self.df.df[:5]
         # tweet_df = self.df.get_tweet_df()         
 
 
